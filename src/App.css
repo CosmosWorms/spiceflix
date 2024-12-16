@@ -126,6 +126,7 @@ body {
   gap: 20px;
   overflow-x: auto;
   padding-bottom: 10px;
+  overflow: visible;
 }
 
 .card {
