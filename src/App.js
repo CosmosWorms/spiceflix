@@ -57,6 +57,7 @@ function App() {
       {/* Navbar */}
       <header className="navbar">
         <div className="logo" style={{ fontFamily: "Bebas Neue" }}>SPICEFLIX</div>
+        <div className="tagline" style={{ fontFamily: "Bebas Neue" }}>The SPICE must flow 🌶️</div>
       </header>
 
       {/* Hero Section */}
