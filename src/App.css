@@ -1,0 +1,215 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensures vertical alignment */
+  padding: 20px 40px; /* Adds horizontal padding for better spacing */
+  position: fixed; /* Makes the navbar fixed to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar is above other content */
+}
+
+.logo {
+  color: red;
+  font-family: "Bebas Neue", sans-serif; /* Bebas Neue for the logo font */
+  font-size: 36px; /* Larger size for prominence */
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Hero Section */
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Smooth fade height */
+  background: linear-gradient(to bottom, transparent, #111);
+}
+.hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero-text {
+  position: absolute;
+  top: 40%;
+  left: 3%; /* Hero title and description more to the left */
+  text-align: left;
+  max-width: 40%;
+}
+
+.hero-title {
+
+  font-family: "Bebas Neue", sans-serif; /* Ensure correct font */
+  font-weight: normal; /* Remove boldness */
+  font-size: 100px; /* Adjust font size to fit in one line */
+  transform: scaleY(0.8);
+  letter-spacing: 5px; /* Slight spacing for aesthetics */
+  white-space: nowrap; /* Prevent line breaks */
+  margin: 0;
+  color: white;
+}
+
+.hero-description {
+  margin-top:-5px;
+  font-size: 28px; /* Bigger font for description */
+  margin-bottom: 10px;
+}
+.play-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px; /* Larger button text */
+  font-weight: bold; /* Make the text bold for emphasis */
+  width: 100px; /* Increase button width */
+  height: 50px; /* Increase button height */
+  background-color: white;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  border: none;
+}
+
+.play-triangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid black; /* Bigger triangle */
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-radius: 4px; /* Keep triangle edges rounded */
+  margin-right: 5px;
+}
+
+
+.play-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Row Section */
+.row {
+  margin: 20px;
+}
+
+.row h2 {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.row-content {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.card {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden;
+  min-width: 280px; /* Bigger thumbnails */
+  height: 160px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail-title {
+  position: absolute;
+  top: 10px; /* Adjust distance from the top */
+  left: 10px; /* Adjust distance from the left */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal-content {
+  position: relative;
+  background: #222;
+  padding: 20px;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.modal-details {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.modal-details h2 {
+  margin: 10px 0;
+}
+
+.modal-details .modal-stats {
+  font-size: 14px;
+  color: #bbb;
+}
