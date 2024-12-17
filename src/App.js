@@ -107,34 +107,42 @@ function App() {
 
       {/* Modal */}
       {modalData && (
-        <div className="modal">
-          <div className="modal-content">
-            <button className="close-modal" onClick={closeModal}>
-              ✖
-            </button>
-            <video
-              className="modal-video"
-              controls
-              autoPlay
-              src={modalData.videoSrc}
-            ></video>
-            <div className="modal-details">
-              <h2>{modalData.title}</h2>
-              <p>{modalData.description}</p>
-              <p>
-                <a
-                  href={modalData.postUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "lightblue", textDecoration: "underline" }}
-                >
-                  View Richie's post on X
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
+  <div
+    className={`modal ${modalData ? "show" : ""}`}
+    onClick={closeModal} /* Close modal on background click */
+  >
+    <div
+      className="modal-content"
+      onClick={(e) => e.stopPropagation()} /* Prevent closing when clicking modal content */
+    >
+      <button className="close-modal" onClick={closeModal}>
+        ✖
+      </button>
+      <video
+        className="modal-video"
+        controls
+        autoPlay
+        src={modalData.videoSrc}
+      ></video>
+      <div className="modal-details">
+        <h2>{modalData.title}</h2>
+        <p>{modalData.description}</p>
+        <p>
+          <a
+            href={modalData.postUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "lightblue", textDecoration: "underline" }}
+          >
+            View Richie's post on X
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+)}
+
+
     </div>
   );
 }

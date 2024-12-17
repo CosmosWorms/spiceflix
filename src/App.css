@@ -1,13 +1,15 @@
 /* General Reset */
 body {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
   background-color: #111;
   color: #fff;
 }
 
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -131,8 +133,12 @@ body {
   display: flex;
   gap: 20px;
   overflow-x: auto;
+  scrollbar-width: none; /* Hides scrollbar for Firefox */
   padding-bottom: 10px;
   overflow: visible;
+}
+.row-content::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for Chrome, Safari, Edge */
 }
 
 .card {
@@ -169,6 +175,7 @@ body {
 }
 
 /* Modal */
+/* Modal Overlay - Transition */
 .modal {
   position: fixed;
   top: 0;
@@ -180,16 +187,34 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 10;
+  opacity: 0; /* Start invisible */
+  visibility: hidden; /* Hidden by default */
+  transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
+/* Modal Content - Scale Animation */
 .modal-content {
-  position: relative;
   background: #222;
   padding: 20px;
-  width: 60%;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  width: 60%;
+  max-width: 800px;
+  transform: scale(0.8); /* Start slightly smaller */
+  opacity: 0; /* Start invisible */
+  transition: transform 0.8s ease, opacity 0.8s ease; /* Smooth transition */
 }
+
+/* Modal Visible State */
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal.show .modal-content {
+  transform: scale(1); /* Smoothly scale to normal size */
+  opacity: 1; /* Fade in */
+}
+
 
 .close-modal {
   position: absolute;
