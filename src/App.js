@@ -14,17 +14,6 @@ function App() {
     setModalData(null);
   };
 
-  const teasers = [
-      {
-        id: 1,
-        title: "Part 3",
-        description: "The mysterious part 3 of the spice lore created by Richie is coming soon...",
-        videoSrc: "/teasers/part3teaser.mp4",
-        placeholderSrc: "/teasers/part3-teaser-placeholder.png",
-        postUrl: "https://x.com/richieblasco/status/1868832935388103078",
-      }
-
-  ]
   // Videos array with X post links
   const videos = [
     {
