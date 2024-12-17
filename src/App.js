@@ -78,7 +78,6 @@ function App() {
             href="https://x.com/spiceoncosmos"
             target="_blank"
             rel="noopener noreferrer"
-            title="Spice on X"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             The SPICE must flow 🌶️
