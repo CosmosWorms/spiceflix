@@ -10,6 +10,7 @@ body {
 .App {
   text-align: center;
   overflow-x: hidden;
+  position: relative; /* Ensures no unexpected shifting */
 }
 
 /* Navbar */
@@ -131,11 +132,11 @@ body {
 
 .row-content {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scrollbar-width: none; /* Hides scrollbar for Firefox */
+  gap: 20px; /* Space between cards */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  overflow: visible; /* Keep vertical overflow visible */
   padding-bottom: 10px;
-  overflow: visible;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 .row-content::-webkit-scrollbar {
   display: none; /* Hides scrollbar for Chrome, Safari, Edge */
@@ -143,6 +144,7 @@ body {
 
 .card {
   position: relative;
+  overflow: visible;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
   border-radius: 15px; /* Rounded corners */
