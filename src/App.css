@@ -220,3 +220,98 @@ body {
   font-size: 14px;
   color: #bbb;
 }
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column; /* Stack logo and tagline vertically */
+    padding: 10px 20px;
+    align-items: flex-start; /* Align everything to the left */
+  }
+
+  .logo {
+    font-size: 28px; /* Smaller logo size */
+  }
+
+  .tagline {
+    font-size: 10px;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 50vh; /* Smaller hero section */
+  }
+
+  .hero-text {
+    top: 20%; /* Adjust positioning */
+    left: 5%; /* Keep text aligned to the left */
+    max-width: 90%; /* Allow more room for text */
+  }
+
+  .hero-title {
+    font-size: 32px; /* Reduce font size for mobile */
+    letter-spacing: 2px; /* Reduce spacing */
+    transform: none; /* Reset scaling */
+    white-space: normal;
+  }
+
+  .hero-description {
+    font-size: 14px; /* Smaller description */
+    margin-top: 5px;
+  }
+
+  .play-button {
+    width: 90px;
+    height: 40px;
+    font-size: 14px; /* Smaller button text */
+  }
+
+  .play-triangle {
+    border-left: 18px solid black; /* Smaller triangle */
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  /* Row Section */
+  .row {
+    margin: 10px;
+  }
+
+  .row h2 {
+    font-size: 18px; /* Smaller section heading */
+    margin-left: 10px;
+  }
+
+  .row-content {
+    gap: 10px;
+  }
+
+  .card {
+    min-width: 180px; /* Smaller thumbnail size */
+    height: 100px;
+  }
+
+  .thumbnail-title {
+    font-size: 12px;
+    padding: 3px 5px;
+  }
+
+  /* Modal */
+  .modal-content {
+    width: 90%; /* Full-width modal */
+    padding: 10px;
+  }
+
+  .close-modal {
+    font-size: 18px; /* Smaller close button */
+  }
+
+  .modal-details h2 {
+    font-size: 18px; /* Smaller modal title */
+  }
+
+  .modal-details p {
+    font-size: 14px; /* Adjust paragraph size */
+  }
+}
