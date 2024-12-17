@@ -8,8 +8,8 @@ body {
 }
 
 .App {
+  overflow-x: hidden; 
   text-align: center;
-  overflow-x: hidden;
   position: relative; /* Ensures no unexpected shifting */
 }
 
@@ -124,7 +124,7 @@ body {
 .row {
   margin: 20px;
   width: 100%;
-  overflow: hidden; /* Keeps rows contained */
+  overflow: visible; /* Keeps rows contained */
 }
 
 .row h2 {
@@ -137,10 +137,9 @@ body {
   flex-wrap: nowrap; /* Prevent wrapping */
   width: max-content; /* Match content width */
   gap: 20px; /* Space between cards */
-  overflow-x: auto; /* Allow horizontal scrolling */
-  overflow: visible; /* Keep vertical overflow visible */
+  overflow: auto; /* Allow horizontal scrolling */
+  padding-top:10px;
   padding-bottom: 10px;
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
   width: 100%; /* Ensures row-content takes full width */
   box-sizing: border-box; 
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
@@ -151,11 +150,10 @@ body {
 
 .card {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
   border-radius: 15px; /* Rounded corners */
-  overflow: hidden;
   min-width: 280px; /* Bigger thumbnails */
   height: 160px;
 }
