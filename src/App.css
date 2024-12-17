@@ -25,6 +25,11 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000; /* Ensures the navbar is above other content */
+  box-sizing: border-box; /* Prevent overflowing */
+}
+.spice-link {
+  margin-left: auto; /* Pushes the link to the far right */
+  padding-bottom:10px;
 }
 
 .logo {
@@ -34,6 +39,7 @@ body {
   letter-spacing: 2px;
   font-weight: bold;
   margin: 0;
+  
 }
 .tagline {
   font-size: 12px; /* Smaller font size */
@@ -182,7 +188,7 @@ body {
 }
 
 /* Modal */
-/* Modal Overlay - Transition */
+/* Modal Container */
 .modal {
   position: fixed;
   top: 0;
@@ -193,46 +199,49 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
-  opacity: 0; /* Start invisible */
-  visibility: hidden; /* Hidden by default */
-  transition: opacity 0.8s ease, visibility 0.8s ease;
+  z-index: 1000;
+  opacity: 0; /* Start hidden */
+  visibility: hidden; /* Start not visible */
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
 
-/* Modal Content - Scale Animation */
+/* Show Modal */
+.modal.show {
+  opacity: 1; /* Fade in */
+  visibility: visible; /* Make visible */
+}
+
+/* Modal Content */
 .modal-content {
   background: #222;
   padding: 20px;
   border-radius: 10px;
   width: 60%;
   max-width: 800px;
-  transform: scale(0.8); /* Start slightly smaller */
-  opacity: 0; /* Start invisible */
-  transition: transform 0.8s ease, opacity 0.8s ease; /* Smooth transition */
+  transform: scale(0.9); /* Start slightly zoomed out */
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-/* Modal Visible State */
-.modal.show {
-  opacity: 1;
-  visibility: visible;
-}
-
+/* Animate Modal Content */
 .modal.show .modal-content {
-  transform: scale(1); /* Smoothly scale to normal size */
+  transform: scale(1); /* Scale to normal */
   opacity: 1; /* Fade in */
 }
 
 
+/* Close Button */
 .close-modal {
   position: absolute;
   top: 10px;
   right: 10px;
   background: none;
-  color: #fff;
+  color: white;
   border: none;
   font-size: 24px;
   cursor: pointer;
 }
+
 
 .modal-video {
   width: 100%;
@@ -246,18 +255,20 @@ body {
 
 .modal-details h2 {
   margin: 10px 0;
+  font-size: 22px;
 }
 
-.modal-details .modal-stats {
-  font-size: 14px;
-  color: #bbb;
+.modal-details p {
+  font-size: 16px;
+  color: #ddd;
 }
+
 
 /* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {
   /* Navbar */
   .navbar {
-    flex-direction: column; /* Stack logo and tagline vertically */
+    flex-direction: row; /* Stack logo and tagline vertically */
     padding: 10px 20px;
     align-items: flex-start; /* Align everything to the left */
   }
@@ -267,7 +278,13 @@ body {
   }
 
   .tagline {
+    padding-top:10px;
     font-size: 10px;
+    margin-right:40px;
+  }
+
+  .spicelink a{
+    font-size: 10px; /* Adjust link size for mobile */
   }
 
   /* Hero Section */

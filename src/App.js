@@ -18,16 +18,18 @@ function App() {
   const videos = [
     {
       id: 1,
-      title: "Part 1",
-      description: "$ SPICE : AWAKENING. The wonderful part 1 of the spice lore created by Richie...",
+      title: "Part 1 - Awakening",
+      descriptionLine1: "$ SPICE : AWAKENING",
+      descriptionLine2: "The time is near, we have been preparing...",
       videoSrc: "/videos/part1.mp4",
       placeholderSrc: "/images/part1-placeholder.png",
       postUrl: "https://x.com/richieblasco/status/1860543660791857578",
     },
     {
       id: 2,
-      title: "Part 2",
-      description: "$ SPICE : THE SIGNAL. The wonderful part 2 of the spice lore created by Richie...",
+      title: "Part 2 - The Signal",
+      descriptionLine1: "$ SPICE : THE SIGNAL",
+      descriptionLine2:  "Many cheeks were clenched for this moment...",
       videoSrc: "/videos/part2.mp4",
       placeholderSrc: "/images/part2-placeholder.png",
       postUrl: "https://x.com/richieblasco/status/1862992510261526682",
@@ -35,7 +37,8 @@ function App() {
     {
       id: 3,
       title: "Part 3 - Teaser",
-      description: "The mysterious part 3 of the spice lore created by Richie is coming soon...",
+      descriptionLine1: "Full episode coming soon...",
+      descriptionLine2: "Guests have arrived...",
       videoSrc: "/teasers/part3teaser.mp4",
       placeholderSrc: "/teasers/part3-teaser-placeholder.png",
       postUrl: "https://x.com/richieblasco/status/1868832935388103078",
@@ -58,7 +61,29 @@ function App() {
       {/* Navbar */}
       <header className="navbar">
         <div className="logo" style={{ fontFamily: "Bebas Neue" }}>SPICEFLIX</div>
-        <div className="tagline" style={{ fontFamily: "Bebas Neue" }}>The SPICE must flow 🌶️</div>
+        <div className="tagline" style={{ fontFamily: "Bebas Neue" }}><a href="https://x.com/spiceoncosmos" /* Replace with your desired link URL */
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Spice on X"
+    
+    style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }}>The SPICE must flow 🌶️</a></div>
+    <div className="spice-link">
+    <a
+      href="https://app.osmosis.zone/?to=SPICE&sellOpen=false&buyOpen=false" // Replace with your desired link URL
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Trade on Osmosis"
+      style={{
+        textDecoration: "none",
+        color: "white",
+        fontWeight: "bold",
+        fontSize: "16px",
+        cursor: "pointer",
+      }}
+    >
+      Get some spice on Osmosis
+    </a>
+  </div>
       </header>
 
       {/* Hero Section */}
@@ -73,7 +98,7 @@ function App() {
           <div className="hero-text">
             <h1 className="hero-title">$SPICE PART 3 - TEASER</h1>
             <p className="hero-description">
-              The mysterious part 3 of the spice lore created by Richie is coming soon...
+            Guests have arrived... Full episode coming soon...
             </p>
             <div className="hero-buttons">
             <button className="play-button" onClick={() => openModal(videos[2])}>
@@ -127,7 +152,8 @@ function App() {
       ></video>
       <div className="modal-details">
         <h2>{modalData.title}</h2>
-        <p>{modalData.description}</p>
+        <p>{modalData.descriptionLine1}</p>
+        <p>{modalData.descriptionLine2}</p>
         <p>
           <a
             href={modalData.postUrl}
