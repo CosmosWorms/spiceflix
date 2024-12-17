@@ -14,6 +14,17 @@ function App() {
     setModalData(null);
   };
 
+  const teasers = [
+      {
+        id: 1,
+        title: "Part 3",
+        description: "The mysterious part 3 of the spice lore created by Richie is coming soon...",
+        videoSrc: "/teasers/part3teaser.mp4",
+        placeholderSrc: "/teasers/part3-teaser-placeholder.png",
+        postUrl: "https://x.com/richieblasco/status/1868832935388103078",
+      }
+
+  ]
   // Videos array with X post links
   const videos = [
     {
@@ -32,14 +43,15 @@ function App() {
       placeholderSrc: "/images/part2-placeholder.png",
       postUrl: "https://x.com/richieblasco/status/1862992510261526682",
     },
-    // {
-    //   id: 3,
-    //   title: "Episode 3",
-    //   description: "Hope emerges from the darkest places...",
-    //   videoSrc: "/videos/video3.mp4",
-    //   placeholderSrc: "/images/video3-placeholder.png",
-    //   postUrl: "https://x.com/example_post_3",
-    // },
+    {
+      id: 3,
+      title: "Part 3 - Teaser",
+      description: "The mysterious part 3 of the spice lore created by Richie is coming soon...",
+      videoSrc: "/teasers/part3teaser.mp4",
+      placeholderSrc: "/teasers/part3-teaser-placeholder.png",
+      postUrl: "https://x.com/richieblasco/status/1868832935388103078",
+    }
+
     // {
     //   id: 4,
     //   title: "Episode 4",
@@ -65,17 +77,17 @@ function App() {
         <section className="hero">
           <img
             className="hero-image"
-            src="/images/part2-placeholder.png" /* Replace with actual hero image */
+            src="/teasers/part3-teaser-placeholder.png" /* Replace with actual hero image */
             alt="Hero Scene"
           />
           <div className="overlay"></div>
           <div className="hero-text">
-            <h1 className="hero-title">PART 2 - $SPICE : THE SIGNAL</h1>
+            <h1 className="hero-title">$SPICE PART 3 - TEASER</h1>
             <p className="hero-description">
-              The wonderful part 2 of the spice lore created by Richie...
+              The mysterious part 3 of the spice lore created by Richie is coming soon...
             </p>
             <div className="hero-buttons">
-            <button className="play-button" onClick={() => openModal(videos[1])}>
+            <button className="play-button" onClick={() => openModal(videos[2])}>
             <span className="play-triangle"></span> Play
           </button>
             </div>
