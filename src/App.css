@@ -123,6 +123,8 @@ body {
 /* Row Section */
 .row {
   margin: 20px;
+  width: 100%;
+  overflow: hidden; /* Keeps rows contained */
 }
 
 .row h2 {
@@ -131,8 +133,9 @@ body {
 }
 
 .row-content {
-  display: inline-flex;
-  justify-content: flex-start; /* Aligns items to the left */
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  width: max-content; /* Match content width */
   gap: 20px; /* Space between cards */
   overflow-x: auto; /* Allow horizontal scrolling */
   overflow: visible; /* Keep vertical overflow visible */
@@ -140,6 +143,7 @@ body {
   scrollbar-width: none; /* Hide scrollbar for Firefox */
   width: 100%; /* Ensures row-content takes full width */
   box-sizing: border-box; 
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
 }
 .row-content::-webkit-scrollbar {
   display: none; /* Hides scrollbar for Chrome, Safari, Edge */
