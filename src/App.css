@@ -131,12 +131,15 @@ body {
 }
 
 .row-content {
-  display: flex;
+  display: inline-flex;
+  justify-content: flex-start; /* Aligns items to the left */
   gap: 20px; /* Space between cards */
   overflow-x: auto; /* Allow horizontal scrolling */
   overflow: visible; /* Keep vertical overflow visible */
   padding-bottom: 10px;
   scrollbar-width: none; /* Hide scrollbar for Firefox */
+  width: 100%; /* Ensures row-content takes full width */
+  box-sizing: border-box; 
 }
 .row-content::-webkit-scrollbar {
   display: none; /* Hides scrollbar for Chrome, Safari, Edge */
