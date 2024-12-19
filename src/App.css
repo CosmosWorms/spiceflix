@@ -263,6 +263,17 @@ body {
   color: #ddd;
 }
 
+.tip-link {
+  color: white;
+  text-decoration: none;
+  padding: 2px;
+  display: inline-block;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.tip-link:hover {
+  color: #ffcc00; /* Gold color on hover */
+  border-color: #ffcc00; /* Matching border color */
+}
 
 /* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {

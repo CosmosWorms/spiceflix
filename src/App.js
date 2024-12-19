@@ -164,7 +164,17 @@ function App() {
             View Richie's post on X
           </a>
         </p>
+        
       </div>
+      
+      <p>
+        <a className="tip-link" href="https://omniflix.tv/cosmoscu"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            🪙 Tip the artist 🪙
+          </a>
+        </p>
     </div>
   </div>
 )}
