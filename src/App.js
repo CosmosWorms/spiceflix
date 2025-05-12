@@ -110,7 +110,7 @@ function App() {
             What happens when a meme dies...
             </p>
             <div className="hero-buttons">
-            <button className="play-button" onClick={() => openModal(videos[2])}>
+            <button className="play-button" onClick={() => openModal(videos[4])}>
             <span className="play-triangle"></span> Play
           </button>
             </div>
