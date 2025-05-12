@@ -36,22 +36,31 @@ function App() {
     },
     {
       id: 3,
-      title: "Part 3 - Teaser",
-      descriptionLine1: "Full episode coming soon...",
+      title: "Part 3 - Guests",
+      descriptionLine1: "$ SPICE : GUESTS",
       descriptionLine2: "Guests have arrived...",
       videoSrc: "/teasers/part3teaser.mp4",
       placeholderSrc: "/teasers/part3-teaser-placeholder.png",
       postUrl: "https://x.com/richieblasco/status/1868832935388103078",
-    }
-
-    // {
-    //   id: 4,
-    //   title: "Episode 4",
-    //   description: "A powerful enemy strikes...",
-    //   videoSrc: "/videos/video4.mp4",
-    //   placeholderSrc: "/images/video4-placeholder.png",
-    //   postUrl: "https://x.com/example_post_4",
-    // },
+    },
+    {
+      id: 4,
+      title: "Part 4 - Hopium",
+      descriptionLine1: "$ SPICE : HOPIUM",
+      descriptionLine2: "The flow of life is interesting...",
+      videoSrc: "/videos/part4.mp4",
+      placeholderSrc: "/images/part4-placeholder.png",
+      postUrl: "https://x.com/richieblasco/status/1920286906920718431",
+    },
+    {
+      id: 5,
+      title: "Part 5 - Rebirth",
+      descriptionLine1: "$ SPICE : REBIRTH",
+      descriptionLine2: "What happens when a meme dies...",
+      videoSrc: "/videos/part5.mp4",
+      placeholderSrc: "/images/part5-placeholder.png",
+      postUrl: "https://x.com/richieblasco/status/1921702900268441731",
+    },
   ];
 
   const sortedVideos = [...videos].sort((a, b) => a.id - b.id);
@@ -91,14 +100,14 @@ function App() {
         <section className="hero">
           <img
             className="hero-image"
-            src="/teasers/part3-teaser-placeholder.png" /* Replace with actual hero image */
+            src="/images/part5-placeholder.png" /* Replace with actual hero image */
             alt="Hero Scene"
           />
           <div className="overlay"></div>
           <div className="hero-text">
-            <h1 className="hero-title">$SPICE PART 3 - TEASER</h1>
+            <h1 className="hero-title">$SPICE PART 5 - REBIRTH</h1>
             <p className="hero-description">
-            Guests have arrived... Full episode coming soon...
+            What happens when a meme dies...
             </p>
             <div className="hero-buttons">
             <button className="play-button" onClick={() => openModal(videos[2])}>
